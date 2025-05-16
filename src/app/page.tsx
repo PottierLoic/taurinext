@@ -8,7 +8,7 @@ export default function Home() {
 
   async function hello() {
     const result = await invoke("hello");
-    setWord(result);
+    setWord(result as String);
   }
 
   return (
@@ -25,6 +25,7 @@ export default function Home() {
             Hello tauri !
           </button>
         </div>
+        <p className="flex justify-center text-black">{word}</p>
       </div>
     </div>
   );
